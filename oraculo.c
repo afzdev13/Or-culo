@@ -23,9 +23,15 @@ void loop() { //rotina infinita
     if(digitalRead(microfone) == LOW && CONT == 1 ){
         randNumber = random(300);
         if(randNumber%2 == 0){
-            digitalWrite(13, HIGH);
+            wait(1500);
+            digitalWrite(13, HIGH);            
+            wait(2000);
+            CONT = 0;
         } else {
-            digitalWrite(12, HIGH);
+            wait(1500);
+            digitalWrite(12, HIGH);            
+            wait(2000);
+            CONT = 0;
         }
     }
 
